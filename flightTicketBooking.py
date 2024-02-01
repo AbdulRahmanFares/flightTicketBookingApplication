@@ -5,7 +5,7 @@ flight1TicketsCount = 50
 flight1TicketsRate = 5000
 flight2TicketsCount = 50
 flight2TicketsRate = 5000
-passengerIDGenerate = 0
+passengerIdGenerate = 0
 passengerListForFlight1 = {}
 passengerListForFlight2 = {}
 passengerId = 0
@@ -13,7 +13,7 @@ passengerId = 0
 # Function to book, cancel, or print tickets
 def bookFlight():
     global flightList, flight1TicketsCount, flight1TicketsRate, flight2TicketsCount, flight2TicketsRate
-    global passengerIDGenerate, passengerListForFlight1, passengerListForFlight2, passengerId
+    global passengerIdGenerate, passengerListForFlight1, passengerListForFlight2, passengerId
 
     option = int(input("1. Book 2. Cancel 3. Print\n"))
 
@@ -32,9 +32,9 @@ def bookFlight():
                     flight1TicketsRate = (numberOfTickets * 200) + flight1TicketsRate
                     print("Booked successfully!")
                     print("Flight Id 1 -- Remaining tickets " + str(flight1TicketsCount) + " -- Current ticket price " + str(flight1TicketsRate))
-                    passengerIDGenerate += 1
-                    passengerListForFlight1[passengerIDGenerate] = [numberOfTickets, costOfBookedTickets]
-                    print("Flight Id 1 ->\nPassenger Id " + str(passengerIDGenerate) + " -- Number of tickets booked " + str(numberOfTickets) + " -- Total cost " + str(costOfBookedTickets))
+                    passengerIdGenerate += 1
+                    passengerListForFlight1[passengerIdGenerate] = [numberOfTickets, costOfBookedTickets]
+                    print("Flight Id 1 ->\nPassenger Id " + str(passengerIdGenerate) + " -- Number of tickets booked " + str(numberOfTickets) + " -- Total cost " + str(costOfBookedTickets))
                     bookFlight()
             else:
                 # Booking for Flight 2
@@ -47,9 +47,9 @@ def bookFlight():
                     flight2TicketsRate = (numberOfTickets * 200) + flight2TicketsRate
                     print("Booked successfully!")
                     print("Flight Id 2 -- Remaining tickets " + str(flight2TicketsCount) + " -- Current ticket price " + str(flight2TicketsRate))
-                    passengerIDGenerate += 1
-                    passengerListForFlight2[passengerIDGenerate] = [numberOfTickets, costOfBookedTickets]
-                    print("Flight Id 2 ->\nPassenger Id " + str(passengerIDGenerate) + " -- Number of tickets booked " + str(numberOfTickets) + " -- Total cost " + str(costOfBookedTickets))
+                    passengerIdGenerate += 1
+                    passengerListForFlight2[passengerIdGenerate] = [numberOfTickets, costOfBookedTickets]
+                    print("Flight Id 2 ->\nPassenger Id " + str(passengerIdGenerate) + " -- Number of tickets booked " + str(numberOfTickets) + " -- Total cost " + str(costOfBookedTickets))
                     bookFlight()
         else:
             print("Invalid flight Id!")
