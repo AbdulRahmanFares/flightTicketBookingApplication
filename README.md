@@ -16,15 +16,21 @@ This Python script implements a Flight Ticket Booking Application for the ZOHO A
 
 1. Make sure you have Python installed on your system.
 
-2. Open a terminal or command prompt.
+2. Clone this repository:
 
-3. Navigate to the directory where `flightTicketBooking.py` is located:
+    ```bash
+    git clone https://github.com/AbdulRahmanFares/flightTicketBookingApplication.git
+    ```
+    
+3. Open a terminal or command prompt.
+
+4. Navigate to the cloned directory:
 
    ```bash
-   cd /path/to/your/project
+   cd flightTicketBookingApplication
    ```
 
-4. Run the script:
+5. Run the script:
 
    ```bash
    python flightTicketBooking.py
